@@ -1,4 +1,5 @@
-import java.io.*;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -6,7 +7,6 @@ import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception{
@@ -40,9 +40,9 @@ public class Main {
             System.out.println("\u001b[97m \u001b[104m Título: " + serie.get("title") + " \u001b[m");
             System.out.println(serie.get("image"));
             System.out.println("\u001b[38;5;214m \u001b[48;5;153m Rating: " + serie.get("imDbRating") + " \u001b[m");
-            Double rating = Double.parseDouble(serie.get("imDbRating"));
+            double rating = Double.parseDouble(serie.get("imDbRating"));
 
-            for (int j = 1; j < rating; j++) {
+            for (int j = 1; j < (int) rating; j++) {
                 System.out.print("⭐");
             }
             System.out.println("\n");
