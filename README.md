@@ -1,2 +1,2 @@
-# Imersao-Java-Alura
+# Imersão Java ☕ Alura
 Repositório para os projetos da Imersão Java da Alura.
